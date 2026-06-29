@@ -1,11 +1,10 @@
 """
 LLM-powered explanation layer (v2 upgrade).
 
-This replaces the purely rule-based explanations with a real call to the
-Anthropic API, while falling back automatically to the rule-based version
-in explain.py if no API key is configured. This fallback design is worth
-mentioning in interviews: the app never breaks just because a key is
-missing or a network call fails.
+Replaces the purely rule-based explanations with a real call to the
+Anthropic API, falling back automatically to the rule-based version in
+explain.py if no API key is configured -- the app keeps working even if a
+key is missing or a network call fails.
 
 Setup:
 1. Get a free API key at https://console.anthropic.com/ (sign up, then

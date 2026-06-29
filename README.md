@@ -2,11 +2,6 @@
 
 An AI-assisted analytics tool for exploring EU/EEA disease surveillance data (Tuberculosis and Measles). Ask a question about disease trends, get an interactive chart and a plain-language explanation — generated live by Claude when an API key is set, or by a rule-based fallback engine otherwise. Built as a portfolio project demonstrating healthcare analytics, Python data work, and practical AI integration.
 
-**Live demo:** *(add your Streamlit Cloud link here after deploying)*
-**Screenshot:**
-
-*(add a screenshot here — run the app locally, take a screenshot, save it as `screenshot.png` in this folder, then add: `![App screenshot](screenshot.png)`)*
-
 ---
 
 ## What it does
@@ -42,7 +37,7 @@ If deploying on Streamlit Cloud, set the key via the app's **Secrets** manager i
 
 This project uses **real published figures** from ECDC's official Annual Epidemiological Reports for **Tuberculosis (2018–2022)** and **Measles (2018–2022)** — EU/EEA-wide case counts and notification rates are taken directly from those reports.
 
-One nuance worth being upfront about (and a good thing to mention if asked in an interview): ECDC's [Surveillance Atlas](https://atlas.ecdc.europa.eu/public/) is an interactive tool without a public bulk-CSV export, and raw case-level TESSy data requires a formal data access request to ECDC. So rather than scraping an interactive dashboard, this project compiles the **published aggregate statistics** from ECDC's official reports into clean, analysis-ready datasets:
+One nuance worth being upfront about: ECDC's [Surveillance Atlas](https://atlas.ecdc.europa.eu/public/) is an interactive tool without a public bulk-CSV export, and raw case-level TESSy data requires a formal data access request to ECDC. So rather than scraping an interactive dashboard, this project compiles the **published aggregate statistics** from ECDC's official reports into clean, analysis-ready datasets:
 
 - **Tuberculosis**: full 2018–2022 country-level rates and an EU/EEA-wide age-distribution pattern, both from real published figures; country-level age-group splits are modeled proportionally from the EU/EEA-wide pattern since per-country age breakdowns aren't published at that resolution (documented in `data/build_dataset.py`).
 - **Measles**: EU/EEA yearly rates are real for all 5 years; case counts are real for 2019 and 2022 and estimated from rate × population for 2018/2020/2021 (flagged in a `Cases_estimated` column); country-level figures are a real but single-year (2022) snapshot, since most countries reported zero cases in other years; the age pattern uses real 2019 figures for `<1` and `1-4` age groups, with older groups modeled on the documented decreasing trend (documented in `data/build_measles_dataset.py`).

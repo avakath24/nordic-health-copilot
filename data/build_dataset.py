@@ -5,7 +5,7 @@ Source: ECDC Tuberculosis Annual Epidemiological Reports (2018-2022),
 published by the European Centre for Disease Prevention and Control.
 https://www.ecdc.europa.eu/en/tuberculosis/surveillance-and-disease-data
 
-NOTE ON DATA PROVENANCE (important for README / interview talking point):
+NOTE ON DATA PROVENANCE:
 ECDC's Surveillance Atlas is an interactive tool without a bulk CSV export API,
 and raw line-level TESSy data requires a formal data access request to ECDC.
 This dataset instead compiles real, published aggregate figures (notification

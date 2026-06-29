@@ -1,12 +1,5 @@
 """
 Core analysis functions for the Nordic Health Data Copilot.
-
-R -> pandas cheat sheet (for reference while reading this file):
-  filter(df, x == y)          ->  df[df.x == y]
-  group_by(df, x) %>% summarize(s = sum(y))  ->  df.groupby('x')['y'].sum()
-  arrange(df, x)               ->  df.sort_values('x')
-  mutate(df, z = x + y)        ->  df['z'] = df['x'] + df['y']
-  df %>% select(x, y)          ->  df[['x', 'y']]
 """
 
 import pandas as pd

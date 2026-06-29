@@ -5,12 +5,11 @@ This plays the role of the "LLM explanation layer" in the project plan, but
 without needing an API key. It looks at the summary statistics (same numbers
 that drive the chart) and writes a short, plain-language interpretation.
 
-Upgrade path (mentioned in README): swap `explain_trend()` / `explain_comparison()`
-internals for a real API call to Claude/GPT, passing the same summary stats in
-the prompt instead of hardcoding sentence templates. The function signatures
-would not need to change, which is a nice design point to bring up in an
-interview ("I separated the analysis from the explanation layer so the LLM
-could be swapped in later without touching the rest of the app").
+Upgrade path: swap `explain_trend()` / `explain_comparison()` internals for
+a real API call to Claude/GPT, passing the same summary stats in the prompt
+instead of hardcoding sentence templates. The function signatures would not
+need to change, since the explanation layer is kept separate from the rest
+of the app.
 """
 
 import pandas as pd
